@@ -1,0 +1,11 @@
+
+<ul>
+  <li *ngFor = 'let entry of entries'> {{entry.title}} <br>{{entry.content}} 
+  <a [routerLink] = "['/entry', entry._id]">Ver entrada</a>
+  </li>
+
+</ul>
+
+
+
+

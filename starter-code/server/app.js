@@ -7,8 +7,9 @@ const bodyParser   = require('body-parser');
 const layouts      = require('express-ejs-layouts');
 const mongoose     = require('mongoose');
 const cors         = require('cors');
+require ('dotenv').config();
 
-mongoose.connect('mongodb://localhost/journal-development');
+mongoose.connect(process.env.DBURL);
 
 const app = express();
 

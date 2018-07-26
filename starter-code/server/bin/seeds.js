@@ -1,6 +1,7 @@
 const JournalEntry = require('../models/journal-entry');
 const mongoose     = require('mongoose');
-mongoose.connect('mongodb://localhost/journal-development');
+require('dotenv').config();
+mongoose.connect(process.env.DBURL);
 
 const entries = [
   {
